@@ -12,7 +12,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       process.env.FRONTEND_URL ||
-        "https://ai-chat-frontend-two-omega.vercel.app/",
+        "https://ai-chat-frontend-two-omega.vercel.app",
     ],
     credentials: true,
   }),
