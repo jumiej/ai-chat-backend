@@ -9,7 +9,11 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 app.use(
   cors({
-    origin: "http://localhost:5173", // Adjust this to your frontend's origin
+    origin: [
+      "http://localhost:5173",
+      process.env.FRONTEND_URL ||
+        "https://ai-chat-frontend-two-omega.vercel.app/",
+    ],
     credentials: true,
   }),
 );
