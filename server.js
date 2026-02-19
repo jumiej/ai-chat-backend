@@ -41,6 +41,10 @@ app.post("/api/chat", async (req, res) => {
       model: "gpt-3.5-turbo",
       messages: messages,
       stream: true, // Enable streaming from OpenAI
+      //parameters:
+      temperature: 0.7, //Balanced creativity and coherence
+      max_tokens: 500, //Limit response length
+      presence_penalty: 0.3, //Encourage new topics
     });
 
     //loop through chunks of data as they arrive
