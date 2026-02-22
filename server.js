@@ -38,7 +38,7 @@ app.post("/api/chat", async (req, res) => {
 
     // stream from OpenAI
     const completion = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo",
+      model: "gpt-4o-mini",
       messages: messages,
       stream: true, // Enable streaming from OpenAI
       //parameters:
