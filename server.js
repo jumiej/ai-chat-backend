@@ -45,6 +45,13 @@ app.post("/api/chat", async (req, res) => {
       temperature: 0.7, //Balanced creativity and coherence
       max_tokens: 500, //Limit response length
       presence_penalty: 0.3, //Encourage new topics
+
+      // ✅ ADD WEB SEARCH CAPABILITY
+      tools: [
+        {
+          type: "web_search",
+        },
+      ],
     });
 
     //loop through chunks of data as they arrive
